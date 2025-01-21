@@ -18,6 +18,7 @@ public class InventoryController {
     // Retrieve all
     @GetMapping
     public List<Inventory> getAllInventories() {
+        System.out.println("Getting all inventories");
         return inventoryService.findAll();
     }
 
@@ -33,6 +34,8 @@ public class InventoryController {
     @PostMapping(consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> createInventory(@RequestBody Inventory inventory) {
         // Example business logic for saving inventory
+        System.out.println("Inserting inventory" + inventory.getName());
+        inventoryService.save(inventory);
         return ResponseEntity.ok("Inventory item created: " + inventory.getName());
     }
 
