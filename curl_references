@@ -2,8 +2,8 @@ Invoke-WebRequest -Uri "http://localhost:8080/api/inventory" `
 -Method Post `
 -Headers @{ "Content-Type" = "application/json" } `
 -Body '{
-  "id": 1,
-  "name": "pepsi",
+  "id": 2,
+  "name": "coke",
   "quantity": 10
 }'
 

@@ -30,7 +30,17 @@ public class InventoryController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Create
+    // Create POST
+//    @Operation(summary = "Create a new inventory item")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "Item created successfully",
+//                    content = @Content(mediaType = "application/json",
+//                            schema = @Schema(implementation = Inventory.class))),
+//            @ApiResponse(responseCode = "400", description = "Invalid input",
+//                    content = @Content),
+//            @ApiResponse(responseCode = "500", description = "Server error",
+//                    content = @Content)
+//    })
     @PostMapping(consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> createInventory(@RequestBody Inventory inventory) {
         // Example business logic for saving inventory
