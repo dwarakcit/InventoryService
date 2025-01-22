@@ -39,7 +39,7 @@ dependencies {
 }
 
 bootJar {
-    mainClass = 'InventoryServiceApplication'
+    mainClass = 'org.inventory.InventoryServiceApplication'
 }
 
 tasks.named('test') {
