@@ -1,10 +1,10 @@
-Invoke-WebRequest -Uri "http://127.0.0.1:8080/api/inventory" `
+Invoke-WebRequest -Uri "http://localhost:8080/api/inventory" `
 -Method Post `
 -Headers @{ "Content-Type" = "application/json" } `
 -Body '{
-  "id": 1,
+  "id": 3,
   "name": "pepsi",
-  "quantity": 10
+  "quantity": 20
 }'
 
 Invoke-WebRequest -Uri "http://localhost:8080/api/inventory" `
@@ -13,7 +13,9 @@ Invoke-WebRequest -Uri "http://localhost:8080/api/inventory" `
 
 getAllInventories
 
-docker run
+// docker run -p 8080:8080 sha256:342610e73c06fa58c7b2ae52afb749cf3c3c44c9190418b5a80e211afb5a9e3f
+
+//docker run
 --hostname=f436dfc3b959
 --mac-address=02:42:ac:11:00:02
 --env=PATH=/usr/local/openjdk-21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
